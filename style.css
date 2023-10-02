@@ -1,0 +1,92 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items:center;
+    justify-content:center;
+    background-color: black;
+    overflow: hidden;
+    background-image: url('bg.png');
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+ /* h1 {
+    font-size: 36px; 
+    color: black; 
+    font-family: Georgia, serif; 
+    font-weight: bold; 
+    text-align: center;
+}  */
+.circle {
+    width: 600px;
+    height: 600px;
+    background-color: black;
+    border-radius: 80%;
+    opacity: 0.8;
+}
+
+.loader, .loader span {
+    width: 6em;
+    height: 6em;
+    border: 0.15em solid white;
+    font-size: 30px;
+    position: absolute;
+    border-radius: 0.3em;
+    mix-blend-mode: screen;
+}
+
+.loader {
+    background-color: gold;
+    animation: rotating 6s linear infinite;
+    top: 35%; 
+    left: 45%; 
+    color: black;
+    place-items: center; 
+    font-family: Georgia, serif; 
+    font-weight: bold; 
+    text-align: center;
+}
+@keyframes rotating {
+    to {transform: rotate(1turn);
+    }
+}
+.loader span {
+    animation: de-rotating 12s linear infinite;
+}
+@keyframes de-rotating {
+    from, to {
+        transform: rotate(0deg) scale(0.5);
+    }
+    50% {
+        transform: rotate(-180deg) scale(1.2);
+    }
+}
+
+.loader span:nth-child(1) {
+    top: 4.5em;
+    left: 4.5em;
+    background-color: dodgerblue;
+}
+
+.loader span:nth-child(2) {
+    top: -4.5em;
+    left: 4.5em;
+    background-color: hotpink;
+}
+.loader span:nth-child(3) {
+    top: 4.5em;
+    left: -4.5em;
+    background-color: mediumpurple;
+}
+.loader span:nth-child(4) {
+    top: -4.5em;
+    left: -4.5em;
+    background-color: limegreen;
+}
+
+.pics {
+    width: 110px;
+    height: 110px;
+}
